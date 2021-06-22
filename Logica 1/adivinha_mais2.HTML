@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+	var segredos = [5,7,10,2]; // Criando um ARRAY, sempre criar o ARRAY no PLURAL
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica(){
+		var achou = false;
+ 		for (var posicao = 0; posicao < segredos.length ; posicao++){ // cria um laço de repetição onde a posição inicial é zero e ele caminha na lista de 0 a 3 (sendo 4 posiçoes).
+			// segredos.length faz com que caso a lista aumente não precise trocar o tamanho da lista, ela faz automaticamente.
+
+			if(input.value == segredos[posicao]){
+
+				alert("Você ACERTOU!");
+				achou = true
+				break;
+			}
+
+		}
+		if (achou == false){
+			alert ("Você ERROU!");
+		
+		}
+		
+	input.value = ""; // a caixa de dialogo fica vazia pra uma nova tentativa
+	input.focus(); // seleciona a caixa de dialogo 
+}
+
+	var button = document.querySelector("button");
+	//button.onclick = verifica(); --->>> Se eu colocar os PARENTESES ele vai CHAMAR a função e vai dar errado.
+	
+	button.onclick = verifica; // Sem parenteses o VERIFICA vai para DENTRO do ONCLICK
+
+</script>

@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<script>
+	var anoAtual = 2021
+	var geracao = (anoAtual - 1500) / 28; 
+	function pulaLinha(){
+		document.write("<br><br>");
+	}
+	function mostra (texto){
+		document.write(texto);
+		pulaLinha();
+	}
+	//document.write('Se passou: ' + Math.round(geracao) + " gerações")
+	mostra('Se passou: <br>' + Math.round(geracao) + " gerações")
+</script>

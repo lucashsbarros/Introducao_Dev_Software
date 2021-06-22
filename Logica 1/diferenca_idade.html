@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+<h3>BEM VINDO AO MEU PROGRAMA!!!</h3>
+
+<script>
+	function pulaLInha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(texto){
+		document.write(texto);
+
+		pulaLInha();
+	}
+
+	var idadeLucas = 28;
+	var idadeRenato = 40;
+	var idadeFlavio = 39;
+	var difLucasRenato = idadeRenato - idadeLucas; 
+	var difLucasFlavio = idadeFlavio - idadeLucas;
+	var difRenatoFlavio = idadeRenato - idadeFlavio;
+	
+	/*
+	document.write("Lucas tem " + idadeLucas + " anos");
+	pulaLInha();
+	document.write("Renato tem " + idadeRenato + " anos");
+	pulaLInha();
+	document.write("Flávio tem " + idadeFlavio + " anos");
+	pulaLInha();
+	document.write("A diferança de idade de Lucas e Renato é: "+ difLucasRenato + " anos");
+	pulaLInha();
+	document.write("A diferença de idade de Lucas e Flávio é: " + difLucasFlavio + " anos");
+	pulalinha();
+	document.write("A diferença de idade de Renato e Flávio é: " + difRenatoFlavio + " anos");
+	*/
+	mostra("Lucas tem " + idadeLucas + " anos");
+	mostra("Renato tem " + idadeRenato + " anos");
+	mostra("Flávio tem " + idadeFlavio + " anos");
+	mostra("A diferança de idade de Lucas e Renato é: "+ difLucasRenato + " ano(s)");
+	mostra("A diferença de idade de Lucas e Flávio é: " + difLucasFlavio + " ano(s)");
+	mostra("A diferença de idade de Renato e Flávio é: " + difRenatoFlavio + " ano(s)");
+
+</script>
+
+<!-- 
+
+MODO DO CURSO
+<meta charset="UTF-8">
+<script>
+	
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+    }
+
+    var minhaIdade = 18;
+    var idadeIrmao = 15;
+
+    mostra("Nossa diferença de idade é " + (minhaIdade - idadeIrmao));
+    pulaLinha();
+
+    
+</script>
+
+-->

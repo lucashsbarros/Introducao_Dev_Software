@@ -1,0 +1,98 @@
+<meta charset="UTF-8">
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+	function sorteia(){
+
+		return Math.round(Math.random()* 10)
+	}
+	//var segredos = [];  Criando um ARRAY, sempre criar o ARRAY no PLURAL
+	//O comando irá PUXAR os numeros em parenteses para dentro do ARRAY.
+	//segredos.push(5);
+	//segredos.push(7);
+	//segredos.push(10);
+	//segredos.push(2);
+	//segredos.push(3); 
+
+	// Substituimos todo o passo anterior pelos passos a seguir:	
+	//segredos.push(Math.round(Math.random()* 10)); Esse comando vai criar um numero SORTIDO dentro do ARRAY
+	//segredos.push(Math.round(Math.random()* 10));
+	//segredos.push(Math.round(Math.random()* 10));
+	//segredos.push(Math.round(Math.random()* 10));
+	//segredos.push(Math.round(Math.random()* 10));
+	//segredos.push(Math.round(Math.random()* 10));
+
+	// Substituimos todo o passo anterior pelos passos a seguir:
+	//segredos.push(sorteia());
+	//segredos.push(sorteia());
+	//segredos.push(sorteia());
+	//segredos.push(sorteia());
+	//segredos.push(sorteia());
+
+	// Substituimos todo o passo anterior pelos passos a seguir:
+	// Inclusive comentei a variavel "var segredos = [];"
+
+	function sorteiaNumeros(quantidade){
+		var segredos = [];
+
+		var numero = 1;
+
+		while (numero <= quantidade){
+
+			var numeroAleatorio = sorteia();
+
+			if(numeroAleatorio !== 0){
+				var achou = false;
+
+					for (var posicao = 0; posicao < segredos.length; posicao++){
+
+						if(segredos[posicao] == numeroAleatorio){
+
+					achou =true;
+					break;
+				}
+			}
+
+					if(achou == false){
+						segredos.push(numeroAleatorio);
+						numero++;
+			}		
+			}
+			
+			
+		}
+
+		return segredos;
+	}
+	var segredos = sorteiaNumeros(5); // a função deve devolver uma LISTA de segredos com a qtdade que esta entre parenteses e que não se repetem.
+	console.log(segredos);
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica(){
+		var achou = false;
+ 		for (var posicao = 0; posicao < segredos.length ; posicao++){ 
+			if(input.value == segredos[posicao]){
+
+				alert("Você ACERTOU!");
+				achou = true
+				break;
+			}
+
+		}
+		if (achou == false){
+			alert ("Você ERROU!");
+		
+		}
+		
+	input.value = ""; 
+	input.focus(); 
+}
+
+	var button = document.querySelector("button");
+	
+	
+	button.onclick = verifica; 
+
+</script>

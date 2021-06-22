@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+	var segredo = Math.round(Math.random()*10); // faz o computador escolher um número de 0 a 10 aleatoriamente.
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	function verifica(){
+
+	if(input.value == segredo){
+
+		alert("Você ACERTOU!");
+	}
+	else {
+		alert("Você ERROU!!!!!!!");
+	}
+	input.value = ""; // a caixa de dialogo fica vazia pra uma nova tentativa
+	input.focus(); // seleciona a caixa de dialogo 
+}
+
+	var button = document.querySelector("button");
+	//button.onclick = verifica(); --->>> Se eu colocar os PARENTESES ele vai CHAMAR a função e vai dar errado.
+	
+	button.onclick = verifica; // Sem parenteses o VERIFICA vai para DENTRO do ONCLICK
+
+</script>
