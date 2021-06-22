@@ -1,6 +1,6 @@
 # Introdução ao Desenvolvimento de Software
  
-Nesse diretório atualmente estou colocando os arquivos dos cursos que estou estudando , segue a lista:
+Nesse diretório atualmente estou colocando os arquivos dos cursos DA Aluna que estou estudando, segue a lista:
 <br>1 - Lógica de programação I: Os primeiros programas com Javascript e HTML (Concluído);
 <br>2 - Lógica de programação II: pratique com desenhos, animações e um jogo;
 <br>3 - Minecraft: Estruturas lógicas com redstone;
