@@ -1,0 +1,54 @@
+<!-- Bandeira do Brasil -->
+<canvas widht='600' height='300'></canvas>
+<script>
+	var tela = document.querySelector('canvas');
+	var pincel = tela.getContext('2d');
+
+
+
+// losango verde
+	pincel.fillStyle = 'green';
+	pincel.beginPath();
+				//			x    y
+	pincel.fillRect(25,75, 250, 150);	
+	pincel.fill();
+
+// triangulo cima
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+				// x ,y
+	pincel.moveTo(150,90);
+				// x ,y	
+	pincel.lineTo(50,150);
+				// x ,y	
+	pincel.lineTo(250,150);	
+	pincel.fill();
+
+	pincel.fillStyle = 'yellow';
+	pincel.beginPath();
+				// x ,y
+	pincel.moveTo(150,210);
+				// x ,y	
+	pincel.lineTo(50,150);
+				// x ,y	
+	pincel.lineTo(250,150);	
+	pincel.fill();
+
+	pincel.fillStyle = 'blue';
+	pincel.beginPath();
+	pincel.arc(150, 150, 35, 0, 2*3.14);
+	pincel.fill();
+
+	pincel.fillStyle = 'white';
+	
+	pincel.beginPath();
+				//			x    y
+	pincel.fillRect(115,145, 70, 10);	
+	pincel.fill();
+
+
+
+// triangulo baixo
+
+// circulo
+</script>
