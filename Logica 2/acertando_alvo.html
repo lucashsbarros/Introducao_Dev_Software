@@ -1,0 +1,59 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var raio = 10;
+
+    function desenhaCirculo(x, y, raio, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+        console.log(x + ',' + y);
+    }
+
+    desenhaCirculo(300,200, raio + 20, 'red'); // maior círculo
+    desenhaCirculo(300,200, raio + 10, 'white');
+    desenhaCirculo(300,200, raio, 'red'); // menor circulo
+
+    function dispara(evento) {
+
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        
+       // lógica de acerto?
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, 2, 0, 2 * 3.14);
+        pincel.fill();
+        console.log(x + ',' + y);
+        if ((x > 300 - raio) && (x < 300 + raio) && (y > 200 - raio) && (y < 200 + raio)) {
+            alert('Voce acertou, 100 pontos !!!');
+        }
+
+        else if ((x > 300 - (raio + 10)) && (x < 300 + (raio + 10)) && (y > 200 - (raio + 10)) && (y < 200 + (raio + 10))) {
+            alert('Voce acertou, 50 pontos !!!');
+        }
+        else if ((x > 300 - (raio + 20)) && (x < 300 + (raio + 20)) && (y > 200 - (raio + 20)) && (y < 200 + (raio + 20))) {
+            alert('Voce acertou, 25 pontos !!!');
+        }
+
+
+        else {
+            alert ('Voce errou, tente outra vez');
+        }
+
+
+    }
+
+    tela.onclick = dispara;
+
+
+</script>
