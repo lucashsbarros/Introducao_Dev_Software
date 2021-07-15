@@ -1,0 +1,7 @@
+1626184566180	Delete element
+1626185501223	Delete element
+1626209177260	Extract method 'imprime'
+1626266255973	Rename local variable 'produtoAnalise'
+1626266267486	Rename local variable 'produtoAnaliseMenos1'
+1626271251820	Rename method 'novoSort'
+1626280075045	Rename method 'InsertionSort'
